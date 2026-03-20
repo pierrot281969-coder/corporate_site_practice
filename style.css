@@ -29,20 +29,12 @@ a{
     top:0;
     background-color:#333;
     color:#fff;
-    padding:20px;
-    text-align:center;
-    z-index:10;
-}
-
-.header__inner{
+    height:80px;
     display:flex;
-    justify-content:space-between;
     align-items:center;
-}
-
-.header__nav{
-    display:flex;
-    gap:16px;
+    justify-content:space-between;
+    padding:0 20px;
+    z-index:10;
 }
 
 .header__nav-list{
@@ -71,12 +63,12 @@ section{
 
 .hero__title{
     font-size:48px;
-    margin-bottom:32px;
+    margin-bottom:36px;
 }
 
 .hero__text{
     font-size:20px;
-    margin-bottom:32px;
+    margin-bottom:45px;
 }
 
 .hero__btn{
@@ -204,6 +196,7 @@ section{
 /*レスポンシブデザイン*/
 html{
     scroll-behavior:smooth;
+    scroll-padding-top:80px;
 }
 
 /*フッター*/
