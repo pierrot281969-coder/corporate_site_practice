@@ -17,15 +17,20 @@ a{
     text-decoration:none;
 }
 
+.inner{
+    max-width:700px;
+    margin:0 auto;
+    padding:20px 0;
+}
+
 /*ヘッダー*/
 .header{
     position:sticky;
     top:0;
-    justify-content:space-between;
-    align-items:center;
     background-color:#333;
     color:#fff;
-    padding:16px 32px;
+    padding:20px;
+    text-align:center;
     z-index:10;
 }
 
@@ -34,6 +39,7 @@ a{
     justify-content:space-between;
     align-items:center;
 }
+
 .header__nav{
     display:flex;
     gap:16px;
@@ -60,13 +66,12 @@ section{
 }
 
 .hero__inner{
-    max-width:800px;
     margin:0 auto;
 }
 
 .hero__title{
     font-size:48px;
-    margin-bottom:16px;
+    margin-bottom:32px;
 }
 
 .hero__text{
@@ -89,13 +94,12 @@ section{
 }
 
 .about__inner{
-    max-width:800px;
     margin:0 auto;
 }
 
 .about__title{
     font-size:32px;
-    margin-bottom:16px;
+    margin-bottom:32px;
 }
 
 .about__text{
@@ -105,8 +109,8 @@ section{
 
 .about__subtitle{
     font-size:24px;
-    margin-top:32px;
-    margin-bottom:16px;
+    margin-top:48px;
+    margin-bottom:32px;
 }
 
 .about__list{
@@ -122,7 +126,6 @@ section{
 }
 
 .info__inner{
-    max-width:700px;
     margin:0 auto;
 }
 
@@ -162,13 +165,12 @@ section{
 }
 
 .contact__inner{
-    max-width:800px;
     margin:0 auto;
 }
 
 .contact__title{
     font-size:32px;
-    margin-bottom:16px;
+    margin-bottom:32px;
 }
 
 .contact form{
