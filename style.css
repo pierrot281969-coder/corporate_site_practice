@@ -58,7 +58,7 @@ section{
 }
 
 .hero__inner{
-    margin:0 auto;
+    /*unused*/
 }
 
 .hero__title{
@@ -86,7 +86,7 @@ section{
 }
 
 .about__inner{
-    margin:0 auto;
+    /*unused*/
 }
 
 .about__title{
@@ -111,6 +111,32 @@ section{
     margin:0;
 }
 
+/*事業内容*/
+.service{
+    background-color:#f5f5f5;
+    text-align:center;
+}
+
+.service__inner{
+    /*unused*/
+}
+
+.service__title{
+    font-size:32px;
+    margin-bottom:32px;
+}
+
+.service__list{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.service__list li{
+    font-size:18px;
+    margin-bottom:16px;
+}
+
 /*会社情報*/
 .info{
     background-color:#f5f5f5;
@@ -118,7 +144,7 @@ section{
 }
 
 .info__inner{
-    margin:0 auto;
+    /*unused*/
 }
 
 .info__title{
@@ -157,7 +183,7 @@ section{
 }
 
 .contact__inner{
-    margin:0 auto;
+    /*unused*/
 }
 
 .contact__title{
