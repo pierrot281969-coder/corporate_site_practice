@@ -5,7 +5,6 @@
 body{
     margin:0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color:#fff;
 }
 
 h1{
@@ -43,8 +42,8 @@ a{
 .header{
     position:sticky;
     top:0;
-    background-color:#333;
-    color:#fff;
+    background-color:#20323f;
+    color:#e5ecde;
     height:80px;
     display:flex;
     align-items:center;
@@ -67,10 +66,18 @@ section{
     padding:100px 0px;
 }
 
+section:nth-of-type(even){
+    background-color:rgba(229,236,237,0.5);
+}
+
+section:nth-of-type(odd){
+    background-color:rgba(229,236,237,0.3);
+}
+
 /*ヒーロー*/
 .hero{
-    background-color:#f5f5f5;
     text-align:center;
+    background:linear-gradient(135deg, rgba(24,95,119,0.3), rgba(229,236,237,0.9));
 }
 
 .hero__inner{
@@ -80,26 +87,24 @@ section{
 .hero__title{
     font-size:48px;
     margin-bottom:36px;
+    color:#20323f;
 }
 
 .hero__text{
     font-size:20px;
     margin-bottom:45px;
+    color:#185f77;
 }
 
 .hero__btn{
     display:inline-block;
     padding:12px 24px;
-    background-color:#333;
-    color:#fff;
+    background-color:#20323f;
+    color:#e5ecde;
     border-radius:4px;
 }
 
 /*会社概要*/
-.about{
-    background-color:#e0e0e0;
-}
-
 .about__inner{
     /*unused*/
 }
@@ -108,6 +113,7 @@ section{
     font-size:32px;
     margin-bottom:32px;
     text-align:center;
+    color:#20323f;
 }
 
 .about__text{
@@ -116,12 +122,14 @@ section{
     flex:2;
     max-width:500px;
     line-height:1.8;
+    color:#185f77;
 }
 
 .about__subtitle{
     font-size:24px;
     margin-top:48px;
     margin-bottom:32px;
+    color:#20323f;
 }
 
 .about__list{
@@ -132,7 +140,6 @@ section{
 
 /*事業内容*/
 .service{
-    background-color:#f5f5f5;
     text-align:left;
 }
 
@@ -144,12 +151,14 @@ section{
     font-size:32px;
     margin-bottom:32px;
     text-align:center;
+    color:#20323f;
 }
 
 .service__text{
     flex:2;
     max-width:500px;
     line-height:1.8;
+    color:#185f77;
 }
 
 .service__list{
@@ -166,7 +175,6 @@ section{
 
 /*会社情報*/
 .info{
-    background-color:#f5f5f5;
     text-align:left;
 }
 
@@ -178,6 +186,7 @@ section{
     font-size:32px;
     margin-bottom:32px;
     text-align:center;
+    color:#20323f;
 }
 
 .info__list{
@@ -194,6 +203,7 @@ section{
     padding-bottom:4px;
     padding-right:20px;
     text-align:left;
+    color:#20323f;
 }
 
 .info__list dd{
@@ -201,11 +211,11 @@ section{
     text-align:left;
     border-bottom:1px solid #ccc;
     padding-bottom:12px;
+    color:#185f77;
 }
 
 /*お問い合わせフォーム*/
 .contact{
-    background-color:#e0e0e0;
     text-align:center;
 }
 
@@ -216,6 +226,8 @@ section{
 .contact__title{
     font-size:32px;
     margin-bottom:32px;
+    text-align:center;
+    color:#20323f;
 }
 
 .contact form{
@@ -239,8 +251,8 @@ section{
 
 .contact button{
     padding:12px 24px;
-    background-color:#333;
-    color:#fff;
+    background-color:#20323f;
+    color:#e5ecde;
     border-radius:4px;
     border:none;
     cursor:pointer;
@@ -254,8 +266,8 @@ html{
 
 /*フッター*/
 .footer{
-    background-color:#333;
-    color:#fff;
+    background-color:#20323f;
+    color:#e5ecde;
     text-align:center;
     padding:16px 32px;
 }
