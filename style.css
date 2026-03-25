@@ -5,7 +5,6 @@
 body{
     margin:0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color:#fff;
 }
 
 h1{
@@ -17,23 +16,40 @@ a{
     text-decoration:none;
 }
 
-/*ヘッダー*/
-.header{
-    justify-content:space-between;
-    align-items:center;
-    background-color:#333;
-    color:#fff;
-    padding:16px 32px;
+/*統一ルール*/
+.inner{
+    max-width:700px;
+    margin:0 auto;
+    padding:0 20px;
 }
 
-.header__inner{
+.about__content,.service__content{
     display:flex;
-    justify-content:space-between;
-    align-items:center;
+    gap:48px;
+    align-items:flex-start;
 }
-.header__nav{
+
+.about__image,.service__image{
+    max-width:420px;
+}
+
+.about__image img,.service__image img{
+    width:100%;
+    border-radius:8px;
+}
+
+/*ヘッダー*/
+.header{
+    position:sticky;
+    top:0;
+    background-color:#20323f;
+    color:#e5ecde;
+    height:80px;
     display:flex;
-    gap:16px;
+    align-items:center;
+    justify-content:space-between;
+    padding:0 20px;
+    z-index:10;
 }
 
 .header__nav-list{
@@ -47,63 +63,73 @@ a{
 
 /*セクション*/
 section{
-    padding:60px 20px;
+    padding:100px 0px;
+}
+
+section:nth-of-type(even){
+    background-color:rgba(229,236,237,0.5);
+}
+
+section:nth-of-type(odd){
+    background-color:rgba(229,236,237,0.3);
 }
 
 /*ヒーロー*/
 .hero{
-    background-color:#f5f5f5;
     text-align:center;
+    background:linear-gradient(135deg, #e5ecde,rgba(24,95,119,0.15));
 }
 
 .hero__inner{
-    max-width:800px;
-    margin:0 auto;
+    /*unused*/
 }
 
 .hero__title{
     font-size:48px;
-    margin-bottom:16px;
+    margin-bottom:36px;
+    color:#20323f;
 }
 
 .hero__text{
     font-size:20px;
-    margin-bottom:32px;
+    margin-bottom:45px;
+    color:rgba(24,95,119,0.8);
 }
 
 .hero__btn{
     display:inline-block;
     padding:12px 24px;
-    background-color:#333;
+    background-color:#d79748;
     color:#fff;
     border-radius:4px;
 }
 
 /*会社概要*/
-.about{
-    background-color:#e0e0e0;
-    text-align:center;
-}
-
 .about__inner{
-    max-width:800px;
-    margin:0 auto;
+    /*unused*/
 }
 
 .about__title{
     font-size:32px;
-    margin-bottom:16px;
+    margin-bottom:32px;
+    text-align:center;
+    color:#20323f;
 }
 
 .about__text{
     font-size:18px;
     margin-bottom:32px;
+    flex:2;
+    max-width:500px;
+    line-height:1.8;
+    color:rgba(24,95,119,0.8);
 }
 
 .about__subtitle{
     font-size:24px;
-    margin-top:32px;
-    margin-bottom:16px;
+    margin-top:48px;
+    margin-bottom:32px;
+    color:#20323f;
 }
 
 .about__list{
@@ -111,20 +137,97 @@ section{
     padding:0;
     margin:0;
 }
+
+/*事業内容*/
+.service{
+    text-align:left;
+}
+
+.service__inner{
+    max-width:900px;
+}
+
+.service__title{
+    font-size:32px;
+    margin-bottom:32px;
+    text-align:center;
+    color:#20323f;
+}
+
+.service__text{
+    flex:2;
+    max-width:500px;
+    line-height:1.8;
+    color:rgba(24,95,119,0.8);
+}
+
+.service__list{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.service__list li{
+    font-size:18px;
+    font-weight:350;
+    margin-bottom:16px;
+}
+
+/*会社情報*/
+.info{
+    text-align:left;
+}
+
+.info__inner{
+    /*unused*/
+}
+
+.info__title{
+    font-size:32px;
+    margin-bottom:32px;
+    text-align:center;
+    color:#20323f;
+}
+
+.info__list{
+    margin:0;
+    display:grid;
+    grid-template-columns: 180px 1fr;
+    gap:16px 32px;
+    transform:translateX(20px);
+}
+
+.info__list dt{
+    font-weight:bold;
+    border-bottom:none;
+    padding-bottom:4px;
+    padding-right:20px;
+    text-align:left;
+    color:#20323f;
+}
+
+.info__list dd{
+    margin:0;
+    text-align:left;
+    border-bottom:1px solid #ccc;
+    padding-bottom:12px;
+    color:rgba(24,95,119,0.8);
+}
+
 /*お問い合わせフォーム*/
 .contact{
-    background-color:#f5f5f5;
     text-align:center;
 }
 
 .contact__inner{
-    max-width:800px;
-    margin:0 auto;
+    /*unused*/
 }
 
 .contact__title{
     font-size:32px;
-    margin-bottom:16px;
+    margin-bottom:32px;
+    text-align:center;
+    color:#20323f;
 }
 
 .contact form{
@@ -132,6 +235,12 @@ section{
     flex-direction:column;
     gap:16px;
     align-items:center;
+}
+
+.contact label{
+    display:block;
+    margin-bottom:4px;
+    color:#20323f;
 }
 
 .contact input, .contact textarea{
@@ -148,17 +257,23 @@ section{
 
 .contact button{
     padding:12px 24px;
-    background-color:#333;
+    background-color:#d79748;
     color:#fff;
     border-radius:4px;
     border:none;
     cursor:pointer;
 }
 
+/*レスポンシブデザイン*/
+html{
+    scroll-behavior:smooth;
+    scroll-padding-top:80px;
+}
+
 /*フッター*/
 .footer{
-    background-color:#333;
-    color:#fff;
+    background-color:#20323f;
+    color:#e5ecde;
     text-align:center;
     padding:16px 32px;
 }
