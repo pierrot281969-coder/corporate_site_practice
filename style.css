@@ -41,8 +41,12 @@ a{
     align-items:flex-start;
 }
 
-.about__image,.service__image{
-    max-width:420px;
+.about__image{
+    max-width:300px;
+}
+
+.service__image{
+    max-width:380px;
 }
 
 .about__image img,.service__image img{
@@ -155,7 +159,7 @@ section:nth-of-type(odd){
     font-size:18px;
     margin-bottom:32px;
     flex:2;
-    max-width:500px;
+    max-width:400px;
     line-height:1.8;
     color:rgba(24,95,119,0.8);
 }
