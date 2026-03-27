@@ -1,3 +1,17 @@
+/*変数*/
+:root{
+    --space-lg:120px;
+    --space-md:48px;
+    --space-sm:24px;
+    --space-xs:16px;
+
+    --color-main:#20323f;   /* 濃い紺（ベース） */
+    --color-sub:#185f77;    /* 青系（補助） */
+    --color-accent:#d79748; /* オレンジ（アクセント） */
+    --color-bg:#e5ecde;     /* 薄い背景 */
+}
+
+/*リセット*/
 *{
     box-sizing:border-box;
 }
@@ -50,8 +64,8 @@ a{
 .header{
     position:sticky;
     top:0;
-    background-color:#20323f;
-    color:#e5ecde;
+    background-color:var(--color-main);
+    color:var(--color-bg);
     height:80px;
     display:flex;
     align-items:center;
@@ -88,7 +102,11 @@ a{
 
 /*セクション*/
 section{
-    padding:100px 0px;
+    padding:var(--space-lg) 0;
+}
+
+section:not(.hero){
+    padding:var(--space-lg) 0;
 }
 
 section:nth-of-type(even){
@@ -102,36 +120,33 @@ section:nth-of-type(odd){
 /*ヒーロー*/
 .hero{
     text-align:center;
-    background:linear-gradient(135deg, #e5ecde,rgba(24,95,119,0.15));
-}
-
-.hero__inner{
-    /*unused*/
+    background:linear-gradient(135deg, var(--color-bg),rgba(24,95,119,0.15));
 }
 
 .hero__title{
     font-size:48px;
-    margin-bottom:36px;
-    color:#20323f;
+    margin-bottom:var(--space-md);
+    color:var(--color-main);
 }
 
 .hero__text{
     font-size:20px;
-    margin-bottom:45px;
-    color:rgba(24,95,119,0.8);
+    margin-bottom:var(--space-sm);
+    color:var(--color-sub);
 }
 
 .hero__btn{
     display:inline-block;
     padding:12px 24px;
-    background-color:#d79748;
-    color:#20323f;
+    margin-top:16px;
+    background-color:var(--color-accent);
+    color:var(--color-main);
     border-radius:4px;
     transition:0.3s;
 }
 .hero__btn:hover{
-    background-color:#185f77;
-    color:#e5ecde;
+    background-color:var(--color-sub);
+    color:var(--color-bg);
     transform:translateY(-2px);
 }
 
@@ -142,14 +157,14 @@ section:nth-of-type(odd){
 
 .about__title{
     font-size:32px;
-    margin-bottom:32px;
+    margin-bottom:var(--space-md);
     text-align:center;
-    color:#20323f;
+    color:var(--color-main);
 }
 
 .about__text{
     font-size:18px;
-    margin-bottom:32px;
+    margin-bottom:var(--space-sm);
     flex:2;
     max-width:400px;
     line-height:1.8;
@@ -171,9 +186,9 @@ section:nth-of-type(odd){
 
 .service__title{
     font-size:32px;
-    margin-bottom:32px;
+    margin-bottom:var(--space-md);
     text-align:center;
-    color:#20323f;
+    color:var(--color-main);
 }
 
 .service__image{
@@ -182,6 +197,7 @@ section:nth-of-type(odd){
 
 .service__text{
     flex:2;
+    margin-bottom:var(--space-sm);
     max-width:500px;
     line-height:1.8;
     color:rgba(24,95,119,0.8);
@@ -210,9 +226,9 @@ section:nth-of-type(odd){
 
 .info__title{
     font-size:32px;
-    margin-bottom:32px;
+    margin-bottom:var(--space-md);
     text-align:center;
-    color:#20323f;
+    color:var(--color-main);
 }
 
 .info__list{
@@ -220,7 +236,7 @@ section:nth-of-type(odd){
     display:grid;
     grid-template-columns: 180px 1fr;
     gap:16px 32px;
-    transform:translateX(20px);
+    padding-left:20px;
 }
 
 .info__list dt{
@@ -229,7 +245,7 @@ section:nth-of-type(odd){
     padding-bottom:4px;
     padding-right:20px;
     text-align:left;
-    color:#20323f;
+    color:var(--color-main);
 }
 
 .info__list dd{
@@ -237,7 +253,7 @@ section:nth-of-type(odd){
     text-align:left;
     border-bottom:1px solid #ccc;
     padding-bottom:12px;
-    color:rgba(24,95,119,0.8);
+    color:var(--color-sub);
 }
 
 /*お問い合わせフォーム*/
@@ -251,9 +267,9 @@ section:nth-of-type(odd){
 
 .contact__title{
     font-size:32px;
-    margin-bottom:32px;
+    margin-bottom:var(--space-md);
     text-align:center;
-    color:#20323f;
+    color:var(--color-main);
 }
 
 .contact form{
@@ -266,7 +282,7 @@ section:nth-of-type(odd){
 .contact label{
     display:block;
     margin-bottom:4px;
-    color:#20323f;
+    color:var(--color-main);
 }
 
 .contact input, .contact textarea{
@@ -283,8 +299,8 @@ section:nth-of-type(odd){
 
 .contact button{
     padding:12px 24px;
-    background-color:#d79748;
-    color:#20323f;
+    background-color:var(--color-accent);
+    color:var(--color-main);
     border-radius:4px;
     border:none;
     cursor:pointer;
@@ -292,8 +308,8 @@ section:nth-of-type(odd){
 }
 
 .contact button:hover{
-    background-color:#185f77;
-    color:#e5ecde;
+    background-color:var(--color-sub);
+    color:var(--color-bg);
     transform:translateY(-2px);
 }
 
@@ -305,8 +321,8 @@ html{
 
 /*フッター*/
 .footer{
-    background-color:#20323f;
-    color:#e5ecde;
+    background-color:var(--color-main);
+    color:var(--color-bg);
     text-align:center;
     padding:16px 32px;
     font-family: 'Noto Serif JP', serif;
@@ -314,5 +330,4 @@ html{
     font-weight:400;
     font-style: normal;
     line-height:1.8;   
-
 }
