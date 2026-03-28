@@ -1,10 +1,19 @@
 /*変数*/
 :root{
+    /* 余白 */
     --space-lg:64px;
     --space-md:48px;
     --space-sm:24px;
     --space-xs:16px;
 
+    /* フォントサイズ */
+    --font-xl:48px;
+    --font-lg:32px;
+    --font-md:20px;
+    --font-sm:18px;
+    --font-xs:16px;
+
+    /* カラー */
     --color-main:#20323f;   /* 濃い紺（ベース） */
     --color-sub:#185f77;    /* 青系（補助） */
     --color-accent:#d79748; /* オレンジ（アクセント） */
@@ -49,9 +58,22 @@ a{
     padding:0 20px;
 }
 
+/* 見出し　*/
+.about__title,
+.service__title,
+.info__title,
+.contact__title{
+    font-size:var(--font-lg);
+}
+
+.about__text,.service__text{
+    font-size:var(--font-sm);
+}
+
 .about__image img,.service__image img{
     width:100%;
     border-radius:8px;
+    box-shadow: 0 10px 30px rgb(0 0 0 / 0.1);
 }
 
 /*ヘッダー*/
@@ -119,13 +141,13 @@ section:nth-of-type(odd){
 }
 
 .hero__title{
-    font-size:48px;
+    font-size:var(--font-xl);
     margin-bottom:var(--space-md);
     color:var(--color-main);
 }
 
 .hero__text{
-    font-size:20px;
+    font-size:var(--font-md);
     margin-bottom:var(--space-sm);
     color:var(--color-sub);
 }
@@ -154,14 +176,12 @@ section:nth-of-type(odd){
 }
 
 .about__title{
-    font-size:32px;
     margin-bottom:var(--space-md);
     text-align:center;
     color:var(--color-main);
 }
 
 .about__text{
-    font-size:18px;
     margin:0 auto var(--space-sm);
     max-width:500px;
     line-height:1.8;
@@ -176,17 +196,12 @@ section:nth-of-type(odd){
     transform: translateY(10px);
 }
 
-.about__image img {
-    box-shadow: 0 10px 30px rgb(0 0 0 / 0.1);
-}
-
 /*事業内容*/
 .service{
     text-align:left;
 }
 
 .service__title{
-    font-size:32px;
     margin-bottom:var(--space-md);
     text-align:center;
     color:var(--color-main);
@@ -199,7 +214,8 @@ section:nth-of-type(odd){
 }
 
 .service__image{
-    max-width:380px;
+    max-width:320px;
+    transform: translateY(10px);
 }
 
 .service__text{
@@ -210,6 +226,12 @@ section:nth-of-type(odd){
     color:rgb(24 95 119 / 0.8);
 }
 
+.service__lead {
+  margin-bottom:var(--space-sm);
+  font-size:var(--font-md); 
+  color: rgb(24 95 119 / 0.8);
+}
+
 .service__list{
     list-style:none;
     padding:0;
@@ -217,7 +239,7 @@ section:nth-of-type(odd){
 }
 
 .service__list li{
-    font-size:18px;
+    font-size: var(--font-sm); 
     font-weight:350;
     margin-bottom:16px;
 }
@@ -232,7 +254,6 @@ section:nth-of-type(odd){
 }
 
 .info__title{
-    font-size:32px;
     margin-bottom:var(--space-md);
     text-align:center;
     color:var(--color-main);
@@ -273,7 +294,6 @@ section:nth-of-type(odd){
 }
 
 .contact__title{
-    font-size:32px;
     margin-bottom:var(--space-md);
     text-align:center;
     color:var(--color-main);
