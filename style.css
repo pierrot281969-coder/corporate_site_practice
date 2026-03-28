@@ -110,7 +110,12 @@ section:nth-of-type(odd){
 /*ヒーロー*/
 .hero{
     text-align:center;
+    padding:var(--space-lg) 0;
     background:linear-gradient(135deg, var(--color-bg),rgb(24 95 119 / 0.15));
+}
+
+.hero__inner {
+  max-width: 600px;
 }
 
 .hero__title{
@@ -143,10 +148,9 @@ section:nth-of-type(odd){
 
 /*会社概要*/
 .about__content{
-    display:flex;
+    display:block;
     gap:32px;
     align-items:center;
-    justify-content:center;
 }
 
 .about__title{
@@ -158,17 +162,22 @@ section:nth-of-type(odd){
 
 .about__text{
     font-size:18px;
-    margin-bottom:var(--space-sm);
-    flex:1;
-    max-width:440px;
+    margin:0 auto var(--space-sm);
+    max-width:500px;
     line-height:1.8;
-    padding-left:20px;
+    text-align:center;
     color:rgb(24 95 119 / 0.8);
 }
 
 .about__image{
-    max-width:340px;
-    flex:1;
+    max-width:240px;
+    margin:0 auto;
+    margin-top:var(--space-sm);
+    transform: translateY(10px);
+}
+
+.about__image img {
+    box-shadow: 0 10px 30px rgb(0 0 0 / 0.1);
 }
 
 /*事業内容*/
