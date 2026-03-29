@@ -1,17 +1,17 @@
 /*変数*/
 :root{
     /* 余白 */
-    --space-lg:64px;
-    --space-md:48px;
-    --space-sm:24px;
-    --space-xs:16px;
+    --space-lg: 80px;
+    --space-md: 40px;
+    --space-sm: 24px;
+    --space-xs: 16px;
 
     /* フォントサイズ */
-    --font-xl:48px;
-    --font-lg:32px;
-    --font-md:20px;
-    --font-sm:18px;
-    --font-xs:16px;
+    --font-xl: 48px;
+    --font-lg: 32px;
+    --font-md: 24px;
+    --font-sm: 18px;
+    --font-xs: 14px;
 
     /* カラー */
     --color-main:#20323f;   /* 濃い紺（ベース） */
@@ -70,10 +70,17 @@ a{
     font-size:var(--font-sm);
 }
 
+/* 画像　*/
 .about__image img,.service__image img{
     width:100%;
     border-radius:8px;
     box-shadow: 0 10px 30px rgb(0 0 0 / 0.1);
+}
+
+/*リスト*/
+.info__list dt,.info__list dd{
+    border-bottom:1px solid #ccc;
+    padding-bottom:12px;
 }
 
 /*ヘッダー*/
@@ -122,11 +129,11 @@ section{
 }
 
 section:nth-of-type(even){
-    background-color:rgb(229 236 237 / 0.5);
+    background-color:rgb(229 236 237 / 0.25);
 }
 
 section:nth-of-type(odd){
-    background-color:rgb(229 236 237 / 0.3);
+    background-color:transparent;
 }
 
 /*ヒーロー*/
@@ -171,8 +178,6 @@ section:nth-of-type(odd){
 /*会社概要*/
 .about__content{
     display:block;
-    gap:32px;
-    align-items:center;
 }
 
 .about__title{
@@ -228,7 +233,8 @@ section:nth-of-type(odd){
 
 .service__lead {
   margin-bottom:var(--space-sm);
-  font-size:var(--font-md); 
+  font-size:var(--font-sm);
+  font-weight:400; 
   color: rgb(24 95 119 / 0.8);
 }
 
@@ -249,10 +255,6 @@ section:nth-of-type(odd){
     text-align:left;
 }
 
-.info__inner{
-    /*unused*/
-}
-
 .info__title{
     margin-bottom:var(--space-md);
     text-align:center;
@@ -262,35 +264,30 @@ section:nth-of-type(odd){
 .info__list{
     margin:0;
     display:grid;
-    grid-template-columns: 180px 1fr;
-    gap:16px 32px;
-    padding-left:20px;
+    grid-template-columns: 140px 1fr;
+    gap: 16px 24px;
 }
 
 .info__list dt{
     font-weight:bold;
+    font-size:var(--font-xs);
+    letter-spacing:0.05em;
     border-bottom:none;
-    padding-bottom:4px;
-    padding-right:20px;
     text-align:left;
     color:var(--color-main);
 }
 
 .info__list dd{
+    font-size:var(--font-sm);
     margin:0;
     text-align:left;
-    border-bottom:1px solid #ccc;
-    padding-bottom:12px;
     color:var(--color-sub);
+    line-height:1.6;
 }
 
 /*お問い合わせフォーム*/
 .contact{
     text-align:center;
-}
-
-.contact__inner{
-    /*unused*/
 }
 
 .contact__title{
