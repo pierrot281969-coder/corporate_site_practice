@@ -18,6 +18,11 @@
     --color-sub:#185f77;    /* 青系（補助） */
     --color-accent:#d79748; /* オレンジ（アクセント） */
     --color-bg:#e5ecde;     /* 薄い背景 */
+
+    --color-border:rgb(32 50 63 / 0.2); /* ← 透過で統一 */
+    --color-sub-light: rgb(24 95 119 / 0.8);/* 透過補助　*/
+    --color-accent-light: rgb(215 151 72 / 0.7); /* 透過アクセント */
+    --color-bg-light: rgb(229 236 237 / 0.85); /* 透過背景 */
 }
 
 /*リセット*/
@@ -80,7 +85,7 @@ a{
 
 .about__text,.service__text{
     font-size:var(--font-sm);
-    color:#20323f;
+    color:var(--color-sub-light);
 }
 
 /* 画像　*/
@@ -92,7 +97,7 @@ a{
 
 /*リスト*/
 .info__list dt,.info__list dd{
-    border-bottom:1px solid #ccc;
+    border-bottom:1px solid var(--color-border);
     padding-bottom:12px;
 }
 
@@ -118,6 +123,15 @@ a{
     line-height:1.8;   
 }
 
+.header__toggle{
+  display:none;
+  font-size:24px;
+  background:none;
+  border:none;
+  color:var(--color-bg);
+  cursor:pointer;
+}
+
 .header__nav-list{
     list-style:none;
     justify-content:space-between;
@@ -133,7 +147,7 @@ a{
 }
 
 .header__nav-item a:hover{
-    color:rgb(215 151 72 / 0.7);
+    color:var(--color-accent-light);
 }
 
 /*セクション*/
@@ -251,10 +265,10 @@ section:nth-of-type(odd){
 }
 
 .service__lead {
-  margin-bottom:var(--space-sm);
-  font-size:var(--font-sm);
-  font-weight:400; 
-  color: rgb(24 95 119 / 0.8);
+    margin-bottom:var(--space-sm);
+    font-size:var(--font-sm);
+    font-weight:inherit; 
+    color: var(--color-sub-light);
 }
 
 .service__list{
@@ -265,7 +279,7 @@ section:nth-of-type(odd){
 
 .service__list li{
     font-size: var(--font-sm); 
-    font-weight:350;
+    font-weight:450;
     margin-bottom:16px;
 }
 
@@ -322,10 +336,10 @@ section:nth-of-type(odd){
 }
 
 .contact form{
-    background:#f8f8f8;
+    background:var(--color-bg-light);
     padding:40px;
     border-radius:8px;
-    box-shadow:0 10px 30px rgb(0 0 0 /0.08);
+    box-shadow:0 10px 30px rgb(0 0 0 /0.06);
     display:flex;
     flex-direction:column;
     gap:24px;
@@ -342,7 +356,7 @@ section:nth-of-type(odd){
     width:100%;
     max-width:400px;
     padding:12px;
-    border:1px solid #ddd;
+    border:1px solid var(--color-border);
     background:#fff;
     border-radius:4px;
 }
@@ -471,7 +485,7 @@ html{
     .about__title{
         line-height:1.4;
     }
-    
+
     .sp-break{
         display:block;
     }
