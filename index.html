@@ -2,6 +2,7 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>株式会社 O-bit</title>
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,6 +23,12 @@
                 <a href="#">株式会社 O-bit</a>
             </h1>
             <nav class="header__nav">
+                <button class="header__toggle" aria-label="menu">
+                    <span class="header__toggle-bar"></span>
+                    <span class="header__toggle-bar"></span>
+                    <span class="header__toggle-bar"></span>
+                </button>
+
                 <ul class="header__nav-list">
                     <li class="header__nav-item"><a href="#hero">ホーム</a></li>
                     <li class="header__nav-item"><a href="#about">会社概要</a></li>
@@ -35,22 +42,27 @@
      <main>
         <section class="hero" id="hero">
             <div class="hero__inner inner">
-            <h2 class="hero__title">Design Your Orbit.</h2>
-            <p class="hero__text">
-            理想という点を、現実という線へ。
+                <div class="container">
+                <h2 class="hero__title">Design Your Orbit.</h2>
+                <p class="hero__text">
+                理想という点を、現実という線へ。
 
-            お客様の想いと、私たちの技術を繋ぎ、成功へと導く軌道(Orbit)を創ります。
+                お客様の想いと、私たちの技術を繋ぎ、成功へと導く軌道(Orbit)を創ります。
 
-            デジタル(Bit)の力で、あなたの日常に心地良い変化を。
-            
-            私たちは、一歩先を共に歩むパートナーであり続けます。</p>
-            <a href="#contact" class="hero__btn">お問い合わせ</a>
+                デジタル(Bit)の力で、あなたの日常に心地良い変化を。
+                
+                私たちは、一歩先を共に歩むパートナーであり続けます。</p>
+                <a href="#contact" class="hero__btn">お問い合わせ</a>
+                </div>
             </div>
         </section>
 
         <section class="about" id="about">
             <div class="about__inner inner">
-                <h2 class="about__title">想いを、進むべき「軌道」へ。</h2>
+                <div class="container">
+                <h2 class="about__title">
+                    想いを、<span class="sp-break">進むべき「軌道」へ。</span>
+                </h2>
 
                     <div class="about__content">
                         <p class="about__text">
@@ -63,82 +75,88 @@
                         <img src="digital_device.jpg" alt="パソコンやスマートフォンでの作業風景" >
                     </div>
                     </div>
+                </div>
             </div>
         </section>
 
         <section class="service" id="service">
                 <div class="service__inner inner">
-                    <h2 class="service__title">事業内容</h2>
-                    <div class="service__content">
-                        <div class="service__image">
-                            <img src="codeing.jpg" alt="PCに表示されるコード">
+                    <div class="container">
+                        <h2 class="service__title">事業内容</h2>
+                        <div class="service__content">
+                            <div class="service__image">
+                                <img src="codeing.jpg" alt="PCに表示されるコード">
+                            </div>
+                        
+                        <div class="service__text">
+                            <p class="service__lead">
+                                お客様の課題に寄り添い、企画から運用まで一貫してサポートいたします。
+                            </p>
+                            <ul class="service__list">
+                                <li>Webサイトの企画・制作・運用</li>
+                                <li>クリエイティブ・パートナーシップ</li>
+                                <li>UX/UIデザイン</li>
+                            </ul>
                         </div>
-                    
-                    <div class="service__text">
-                          <p class="service__lead">
-                            お客様の課題に寄り添い、企画から運用まで一貫してサポートいたします。
-                          </p>
-                        <ul class="service__list">
-                            <li>Webサイトの企画・制作・運用</li>
-                            <li>クリエイティブ・パートナーシップ</li>
-                            <li>UX/UIデザイン</li>
-                        </ul>
                     </div>
-                
                  </div>
         </section>
 
         <section class="info" id="info">
             <div class="info__inner inner">
-            <h2 class="info__title">会社情報</h2>
-            <dl class="info__list">
-                <dt>商号</dt>
-                <dd>株式会社 O-bit</dd>
+                <div class="container">
+                <h2 class="info__title">会社情報</h2>
+                <dl class="info__list">
+                    <dt>商号</dt>
+                    <dd>株式会社 O-bit</dd>
 
-                <dt>代表者</dt>
-                <dd>代表取締役 xx xx</dd>
+                    <dt>代表者</dt>
+                    <dd>代表取締役 xx xx</dd>
 
-                <dt>所在地</dt>
-                <dd>愛知県名古屋市中村区名駅x-xx-xx<br>
-                    Orbit Building5階</dd>
+                    <dt>所在地</dt>
+                    <dd>愛知県名古屋市中村区名駅x-xx-xx<br>
+                        Orbit Building5階</dd>
 
-                <dt>電話番号</dt>
-                <dd>052-xxx-xxxx</dd>
+                    <dt>電話番号</dt>
+                    <dd>052-xxx-xxxx</dd>
 
-                <dt>設立</dt>
-                <dd>2026年X月X日</dd>
+                    <dt>設立</dt>
+                    <dd>2026年X月X日</dd>
 
-                <dt>資本金</dt>
-                <dd>X億円</dd>
+                    <dt>資本金</dt>
+                    <dd>X億円</dd>
 
-                <dt>従業員数</dt>
-                <dd>XX人</dd>
-            </dl>
+                    <dt>従業員数</dt>
+                    <dd>XX人</dd>
+                </dl>
+                </div>
             </div>
         </section>
 
         <section class="contact" id="contact">
             <div class="contact__inner inner">
-            <h2 class="contact__title">お問い合わせ</h2>
-            <form action="#" method="post">
-            
-            <div class="contact__field">
-                <label for="name">お名前:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
+                <div class="container">
+                <h2 class="contact__title">お問い合わせ</h2>
+                <form action="#" method="post">
+                
+                <div class="contact__field">
+                    <label for="name">お名前:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
 
-            <div class="contact__field">
-                <label for="email">メールアドレス:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
+                <div class="contact__field">
+                    <label for="email">メールアドレス:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
 
-            <div class="contact__field">
-                <label for="message">お問い合わせ内容:</label>
-                <textarea id="message" name="message" required></textarea>
-            </div>
+                <div class="contact__field">
+                    <label for="message">お問い合わせ内容:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
 
-                <button type="submit">送信</button>
-            </form>
+                    <button type="submit">送信</button>
+                </form>
+                </div>
             </div>
         </section>
         </main>
