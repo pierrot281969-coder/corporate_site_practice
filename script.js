@@ -8,3 +8,22 @@ toggle.addEventListener('click', () => {
   const isOpen = nav.classList.contains('is-open');
   toggle.setAttribute('aria-expanded', isOpen);
 });
+
+const targets = document.querySelectorAll('h2,p,li,dt,dd,img');
+
+targets.forEach(el=>{
+    el.classList.add('fade-in');
+    console.log(el.classList);
+});
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('show');
+        }
+    });
+},{
+    threshold:0.1
+});
+
+targets.forEach(el=> observer.observe(el) );
