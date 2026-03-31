@@ -497,18 +497,19 @@ html{
     }
     
     .container{
-        padding:0 16px;
+        padding:10px 12px;
     }
     
     .about__title,
     .service__title,
     .info__title,
     .contact__title{
-        font-size:var(--font-lg);
+        font-size: calc(var(--font-lg) * 1.05);
+        line-height:1.4;
     }
 
     section{
-        padding:24px 0;
+        padding:32px 0;
     }
 
     body{
@@ -518,6 +519,20 @@ html{
 
     p{
         margin-bottom:16px;
+    }
+
+    .header{
+        height:56px;
+        padding:0 12px;
+    }
+
+    .header__logo{
+        font-size:var(--font-md);
+        margin-left:4px;
+    }
+
+    .header__toggle{
+        margin-right:4px;
     }
 
     .hero__inner{
@@ -564,12 +579,18 @@ html{
 
     .info__list dt{
         font-size:var(--font-xs);
-        margin-top:16px;
+        margin-top:20px;
     }
 
     .info__list dd{
         font-size:var(--font-sm);
         margin:0;
+    }
+
+    .footer{
+        padding:8px 36px;
+        font-size:var(--font-xs);
+        line-height:1.5;
     }
 }
 
@@ -578,10 +599,14 @@ html{
     background-color:var(--color-main);
     color:var(--color-bg);
     text-align:center;
-    padding:8px 32px;
+    padding:12px 36px;
     font-family: 'Noto Serif JP', serif;
     font-optical-sizing: auto;
     font-weight:400;
     font-style: normal;
-    line-height:1.5;  
+    line-height:1.7;  
+}
+
+.footer p {
+    margin: 0;
 }
