@@ -1,20 +1,24 @@
 /*変数*/
 :root{
      /* spacing */
-    --space-lg: 80px;
-    --space-md: 48px;
-    --space-sm: 24px;
+    --space-section: 80px;
+    --space-title: 48px;
+    --space-text: 24px;
 
     /* ===== font-size（4段階） ===== */
     --fs-display: 48px;
     --fs-h1: 32px;
     --fs-body: 18px;
-    --fs-small: 16px;
+    --fs-small: 14px;
 
     /* ===== font-weight（3段階） ===== */
     --fw-regular: 400;
     --fw-medium: 500;
     --fw-bold: 700;
+
+    --lh-tight: 1.2;   /* 見出し */
+    --lh-base: 1.7;    /* 本文 */
+    --lh-relaxed: 1.9; /* 説明・長文 */
 
     /* カラー */
     --color-main:#20323f;   /* 濃い紺（ベース） */
@@ -40,7 +44,7 @@ body{
     font-weight:500;
     font-style: normal;
     font-size:var(--fs-body);
-    line-height:1.8;   
+    line-height:var(--lh-base); 
 }
 
 h1{
@@ -52,7 +56,7 @@ h1,h2{
     font-optical-sizing: auto;
     font-weight:400;
     font-style: normal;
-    line-height:1.8;   
+    line-height: var(--lh-tight);
 }
 
 a{
@@ -95,11 +99,20 @@ a{
 .info__title,
 .contact__title{
     font-size:var(--fs-h1);
+    margin-bottom:var(--space-title);
 }
 
 .about__text,.service__text{
     font-size:var(--fs-body);
     color:var(--color-sub-light);
+    margin-bottom:var(--space-text);
+}
+
+.about__text,
+.service__text,
+.hero__text,
+.info__list dd{
+    line-height: var(--lh-relaxed);
 }
 
 /* 画像　*/
@@ -155,7 +168,7 @@ a{
 }
 
 .header__nav-item a{
-    color:#e5ecde;
+    color:var(--color-bg);
     transition:0.3s;
 }
 
@@ -165,7 +178,7 @@ a{
 
 /*セクション*/
 section{
-    padding:var(--space-lg) 0;
+    padding:var(--space-section) 0;
 }
 
 section:nth-of-type(even){
@@ -179,7 +192,7 @@ section:nth-of-type(odd){
 /*ヒーロー*/
 .hero{
     text-align:center;
-    padding:var(--space-lg) 0;
+    padding:var(--space-section) 0;
     background:url("lightray.jpg") center/cover no-repeat;
     position:relative;
 }
@@ -249,7 +262,6 @@ section:nth-of-type(odd){
 }
 
 .about__title{
-    margin-bottom:var(--space-md);
     text-align:center;
     color:var(--color-main);
 }
@@ -275,7 +287,6 @@ section:nth-of-type(odd){
 }
 
 .service__title{
-    margin-bottom:var(--space-md);
     text-align:center;
     color:var(--color-main);
 }
@@ -293,14 +304,12 @@ section:nth-of-type(odd){
 
 .service__text{
     flex:2;
-    margin-bottom:var(--space-sm);
     max-width:500px;
     line-height:1.8;
     color:rgb(24 95 119 / 0.8);
 }
 
 .service__lead {
-    margin-bottom:var(--space-sm);
     font-size:var(--fs-body);
     font-weight:inherit; 
     color: var(--color-sub-light);
@@ -324,7 +333,6 @@ section:nth-of-type(odd){
 }
 
 .info__title{
-    margin-bottom:var(--space-md);
     text-align:center;
     color:var(--color-main);
 }
@@ -356,7 +364,7 @@ section:nth-of-type(odd){
 /*お問い合わせフォーム*/
 .contact{
     text-align:center;
-    padding:var(--space-lg) 0;
+    padding:var(--space-section) 0;
 }
 
 .contact__field{
@@ -365,7 +373,6 @@ section:nth-of-type(odd){
 }
 
 .contact__title{
-    margin-bottom:var(--space-md);
     text-align:center;
     color:var(--color-main);
 }
@@ -530,6 +537,7 @@ html{
     .info__title,
     .contact__title{
         font-size: var(--fs-h1);
+        margin-bottom: var(--space-title);
         line-height:1.4;
     }
 
@@ -556,7 +564,7 @@ html{
     }
 
     .header__logo{
-        font-size:var(--font-md);
+        font-size:var(--fs-body);
         margin-left:4px;
     }
 
