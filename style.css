@@ -1,6 +1,6 @@
 /*変数*/
 :root{
-     /* spacing */
+     /* 余白 */
     --space-section: 80px;
     --space-title: 48px;
     --space-text: 24px;
@@ -16,6 +16,7 @@
     --fw-medium: 500;
     --fw-bold: 700;
 
+    /* 行間 */  
     --lh-tight: 1.2;   /* 見出し */
     --lh-base: 1.7;    /* 本文 */
     --lh-relaxed: 1.9; /* 説明・長文 */
@@ -403,14 +404,14 @@ section:nth-of-type(odd){
     border-radius:4px;
 }
 
+.contact textarea{
+    min-height:120px;
+}
+
 .contact input:focus,.contact textarea:focus {
     outline:none;
     border:1px solid var(--color-accent);
     box-shadow:0 0 2px rgb(0 0 0 / 0.05);
-}
-
-.contact textarea{
-    min-height:120px;
 }
 
 .contact button{
