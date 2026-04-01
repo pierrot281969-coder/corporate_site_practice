@@ -1,17 +1,24 @@
 /*変数*/
 :root{
-    /* 余白 */
-    --space-lg: 80px;
-    --space-md: 40px;
-    --space-sm: 24px;
-    --space-xs: 16px;
+     /* spacing */
+    --space-section: 80px;
+    --space-title: 48px;
+    --space-text: 24px;
 
-    /* フォントサイズ */
-    --font-xl: 48px;
-    --font-lg: 32px;
-    --font-md: 20px;
-    --font-sm: 18px;
-    --font-xs: 16px;
+    /* ===== font-size（4段階） ===== */
+    --fs-display: 48px;
+    --fs-h1: 32px;
+    --fs-body: 18px;
+    --fs-small: 14px;
+
+    /* ===== font-weight（3段階） ===== */
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+
+    --lh-tight: 1.2;   /* 見出し */
+    --lh-base: 1.7;    /* 本文 */
+    --lh-relaxed: 1.9; /* 説明・長文 */
 
     /* カラー */
     --color-main:#20323f;   /* 濃い紺（ベース） */
@@ -36,8 +43,8 @@ body{
     font-optical-sizing: auto; 
     font-weight:500;
     font-style: normal;
-    font-size:var(--font-sm);
-    line-height:1.8;   
+    font-size:var(--fs-body);
+    line-height:var(--lh-base); 
 }
 
 h1{
@@ -49,7 +56,7 @@ h1,h2{
     font-optical-sizing: auto;
     font-weight:400;
     font-style: normal;
-    line-height:1.8;   
+    line-height: var(--lh-tight);
 }
 
 a{
@@ -91,12 +98,21 @@ a{
 .service__title,
 .info__title,
 .contact__title{
-    font-size:var(--font-lg);
+    font-size:var(--fs-h1);
+    margin-bottom:var(--space-title);
 }
 
 .about__text,.service__text{
-    font-size:var(--font-sm);
+    font-size:var(--fs-body);
     color:var(--color-sub-light);
+    margin-bottom:var(--space-text);
+}
+
+.about__text,
+.service__text,
+.hero__text,
+.info__list dd{
+    line-height: var(--lh-relaxed);
 }
 
 /* 画像　*/
@@ -152,7 +168,7 @@ a{
 }
 
 .header__nav-item a{
-    color:#e5ecde;
+    color:var(--color-bg);
     transition:0.3s;
 }
 
@@ -162,7 +178,7 @@ a{
 
 /*セクション*/
 section{
-    padding:var(--space-lg) 0;
+    padding:var(--space-section) 0;
 }
 
 section:nth-of-type(even){
@@ -176,7 +192,7 @@ section:nth-of-type(odd){
 /*ヒーロー*/
 .hero{
     text-align:center;
-    padding:var(--space-lg) 0;
+    padding:var(--space-section) 0;
     background:url("lightray.jpg") center/cover no-repeat;
     position:relative;
 }
@@ -205,13 +221,13 @@ section:nth-of-type(odd){
 }
 
 .hero__title{
-    font-size:var(--font-xl);
+    font-size:var(--fs-display);
     margin-bottom:40px;
     color:var(--color-main);
 }
 
 .hero__text{
-    font-size:var(--font-md);
+    font-size:var(--fs-body);
     color:var(--color-sub);
     max-width:520px;
     margin:0 auto;
@@ -246,7 +262,6 @@ section:nth-of-type(odd){
 }
 
 .about__title{
-    margin-bottom:var(--space-md);
     text-align:center;
     color:var(--color-main);
 }
@@ -272,7 +287,6 @@ section:nth-of-type(odd){
 }
 
 .service__title{
-    margin-bottom:var(--space-md);
     text-align:center;
     color:var(--color-main);
 }
@@ -290,15 +304,13 @@ section:nth-of-type(odd){
 
 .service__text{
     flex:2;
-    margin-bottom:var(--space-sm);
     max-width:500px;
     line-height:1.8;
     color:rgb(24 95 119 / 0.8);
 }
 
 .service__lead {
-    margin-bottom:var(--space-sm);
-    font-size:var(--font-sm);
+    font-size:var(--fs-body);
     font-weight:inherit; 
     color: var(--color-sub-light);
 }
@@ -310,8 +322,8 @@ section:nth-of-type(odd){
 }
 
 .service__list li{
-    font-size: var(--font-sm); 
-    font-weight:450;
+    font-size: var(--fs-body);
+    font-weight: var(--fw-medium);
     margin-bottom:16px;
 }
 
@@ -321,7 +333,6 @@ section:nth-of-type(odd){
 }
 
 .info__title{
-    margin-bottom:var(--space-md);
     text-align:center;
     color:var(--color-main);
 }
@@ -335,7 +346,7 @@ section:nth-of-type(odd){
 
 .info__list dt{
     font-weight:bold;
-    font-size:var(--font-xs);
+    font-size:var(--fs-small);
     letter-spacing:0.05em;
     border-bottom:none;
     text-align:left;
@@ -343,7 +354,7 @@ section:nth-of-type(odd){
 }
 
 .info__list dd{
-    font-size:var(--font-sm);
+    font-size:var(--fs-small);
     margin:0;
     text-align:left;
     color:var(--color-sub);
@@ -353,7 +364,7 @@ section:nth-of-type(odd){
 /*お問い合わせフォーム*/
 .contact{
     text-align:center;
-    padding:var(--space-lg) 0;
+    padding:var(--space-section) 0;
 }
 
 .contact__field{
@@ -362,7 +373,6 @@ section:nth-of-type(odd){
 }
 
 .contact__title{
-    margin-bottom:var(--space-md);
     text-align:center;
     color:var(--color-main);
 }
@@ -518,17 +528,6 @@ html{
 
 /*スマートフォン対応*/
 @media (max-width: 480px){
-    :root{
-        --space-lg: 56px;
-        --space-md: 32px;
-
-        --font-xl: 32px;
-        --font-lg: 24px;
-        --font-md: 18px;
-        --font-sm: 16px;
-        --font-xs: 14px;
-    }
-    
     .container{
         padding:10px 12px;
     }
@@ -537,8 +536,13 @@ html{
     .service__title,
     .info__title,
     .contact__title{
-        font-size: calc(var(--font-lg) * 1.05);
+        font-size: var(--fs-h1);
+        margin-bottom: var(--space-title);
         line-height:1.4;
+    }
+
+    .hero__text,.about__text,.service__text,.info__list dd{
+        font-size:var(--fs-small);
     }
 
     section{
@@ -547,7 +551,7 @@ html{
 
     body{
         line-height:1.8;
-        font-size:var(--font-sm);
+        font-size:var(--fs-small);
     }
 
     p{
@@ -560,7 +564,7 @@ html{
     }
 
     .header__logo{
-        font-size:var(--font-md);
+        font-size:var(--fs-body);
         margin-left:4px;
     }
 
@@ -569,22 +573,24 @@ html{
     }
 
     .hero__inner{
-        max-width:none;
-        padding:0 16px;
+        max-width:100%;
+        padding:24px 16px;
+        border-radius:12px;
+        box-shadow:0 6px 16px rgb(0 0 0 / 0.08);
+        backdrop-filter:blur(8px);
     }
 
     .hero__title{
-        font-size:var(--font-xl)
+        font-size:var(--fs-h1);
+        margin-bottom:24px;
     }
 
     .hero__text{
-        font-size:var(--font-sm);
         line-height:1.8;
     }
 
     .about__text{
         text-align:left;
-        font-size:var(--font-sm);
         line-height:1.8;
     }
 
@@ -611,18 +617,17 @@ html{
     }
 
     .info__list dt{
-        font-size:var(--font-xs);
+        font-size:var(--fs-small);
         margin-top:20px;
     }
 
     .info__list dd{
-        font-size:var(--font-sm);
         margin:0;
     }
 
     .footer{
         padding:8px 36px;
-        font-size:var(--font-xs);
+        font-size:var(--fs-small);
         line-height:1.5;
     }
 }
