@@ -9,3 +9,6 @@ HTML / CSS / JavaScriptで構成されています。
 ## 工夫した点
 - デザインシステム化（CSS変数）
 - レスポンシブ対応
+
+リンク🔗
+https://pierrot281969-coder.github.io/corporate_site_practice/
